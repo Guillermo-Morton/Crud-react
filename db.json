@@ -1,0 +1,22 @@
+{
+    "cafeteria":[
+        {
+            "nombreProducto":"cafe con leche",
+            "precioProdcuto":"80",
+            "categoria":"bebida-caliente",
+            "id":1
+        },
+        {
+            "nombreProducto":"submarino",
+            "precioProdcuto":"100",
+            "categoria":"bebida-caliente",
+            "id":2
+        },
+        {
+            "nombreProducto":"bizcochitos 100g",
+            "precioProdcuto":"100",
+            "categoria":"salado",
+            "id":3
+        }
+    ]
+}
