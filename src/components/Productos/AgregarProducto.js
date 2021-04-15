@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Button, Container, Form, Alert } from "react-bootstrap";
+import Swal from 'sweetalert2';
 
 const AgregarProducto = () => {
   const URL = process.env.REACT_APP_API_URL;
@@ -53,6 +54,19 @@ const AgregarProducto = () => {
         // ejecutar la solicitud o request
         const respuesta= await fetch(URL, parametros);
         console.log(respuesta);
+        if((await respuesta.status)=== 201){
+          Swal.fire(
+            'Producto agregado',
+            'Se cargo un producto en la cafeteria',
+            'success'
+          )
+          // limpiar el formulario
+          setNombreProducto('');
+          setPrecioProducto('');
+          setCategoria('');
+
+          // redireccionar a otra ruta
+        }
 
       }catch(error){
         console.log(error);
@@ -72,6 +86,7 @@ const AgregarProducto = () => {
               onChange={(e) => setNombreProducto(e.target.value)}
               type="text"
               placeholder="Submarino.."
+              value={nombreProducto}
             ></Form.Control>
           </Form.Group>
           <Form.Group>
@@ -80,6 +95,7 @@ const AgregarProducto = () => {
               onChange={(e) => setPrecioProducto(e.target.value)}
               type="number"
               placeholder="$50"
+              value={precioProducto}
             ></Form.Control>
           </Form.Group>
           <div className="text-center my-4">
