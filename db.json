@@ -47,6 +47,12 @@
       "precioProducto": "20",
       "categoria": "salado",
       "id": 8
+    },
+    {
+      "nombreProducto": "Agua",
+      "precioProducto": "60",
+      "categoria": "bebida-fria",
+      "id": 9
     }
   ]
 }
