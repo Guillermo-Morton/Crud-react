@@ -41,7 +41,7 @@ function App() {
             </Inicio>
           </Route>
           <Route exact path='/productos'>
-            <ListaProductos></ListaProductos>
+            <ListaProductos productos={productos}></ListaProductos>
           </Route>
           <Route exact path='/productos/nuevo'>
             <AgregarProducto></AgregarProducto>
